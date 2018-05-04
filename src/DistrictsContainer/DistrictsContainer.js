@@ -12,6 +12,7 @@ const DistrictsContainer = ({districts}) => {
       />
     );
   });
+
   return (
     <div className="district-container">
       {allDistrictCards}

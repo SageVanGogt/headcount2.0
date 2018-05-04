@@ -29,26 +29,26 @@ export default class DistrictRepository {
   }
 
   findByName (districtName) {
-    if(districtName) {
+    if (districtName) {
       const caseInsensitiveSearch = new RegExp(districtName, 'gi');
       const foundDistrict = Object.keys(this.stats).find(district => {
-        return caseInsensitiveSearch.test(district)
-      })
-      return this.stats[foundDistrict]
+        return caseInsensitiveSearch.test(district);
+      });
+      return this.stats[foundDistrict];
     } else {
-      return undefined
+      return undefined;
     }
   }
 
   findAllMatches (districtName) {
-    if(!districtName) {
-      return Object.entries(this.stats)
+    if (!districtName) {
+      return Object.entries(this.stats);
     } else {
       const caseInsensitiveSearch = new RegExp(districtName, 'gi');
       const foundDistricts = Object.values(this.stats).filter(district => {
-        return caseInsensitiveSearch.test(district.location)
-      })
-      return foundDistricts
+        return caseInsensitiveSearch.test(district.location);
+      });
+      return foundDistricts;
     }
   }
 
@@ -61,8 +61,8 @@ export default class DistrictRepository {
     const districtAverage = districtTotal / districtKeys.length;
     return Math.round(districtAverage * 1000) / 1000;
   }
-  
-  compareDistrictAverages(districtName1, districtName2) {
+
+  compareDistrictAverages (districtName1, districtName2) {
     districtName1 = districtName1.toUpperCase();
     districtName2 = districtName2.toUpperCase();
     const districtName1Avg = this.findAverage(districtName1);
@@ -72,7 +72,7 @@ export default class DistrictRepository {
       [districtName1]: districtName1Avg,
       [districtName2]: districtName2Avg,
       'compared': comparedValue
-    }
+    };
   }
 }
 
