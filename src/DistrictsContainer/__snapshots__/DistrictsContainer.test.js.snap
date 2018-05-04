@@ -6,6 +6,7 @@ exports[`<DistrictsContainer /> renders correctly 1`] = `
 >
   <article
     className="district-card"
+    onClick={[Function]}
   >
     <section
       className="district-card-header"
@@ -29,6 +30,7 @@ exports[`<DistrictsContainer /> renders correctly 1`] = `
   </article>
   <article
     className="district-card"
+    onClick={[Function]}
   >
     <section
       className="district-card-header"
