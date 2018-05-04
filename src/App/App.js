@@ -34,12 +34,23 @@ class App extends Component {
 
   handleSelect = (district) => {
     const districtObj = allDistricts.findByName(district);
+    districtObj.selected = !districtObj.selected;
     let firstSelectedDistrict = this.state.firstSelectedDistrict || null;
     let secondSelectedDistrict = this.state.secondSelectedDistrict || null;
+    
+    // if(this.state.selectedDistricts[0] && this.state.selectedDistricts[0].selected) {
+    //   firstSelectedDistrict = null;
+    // } else if(this.state.selectedDistricts[1] && this.state.selectedDistricts[0].selected) {
+    //   secondSelectedDistrict = null;
+    // }
+
+    //if card is selected, and it is already
+    //this selected array, remove that card object
+    //from the selected cardsarray
 
     if(this.state.selectedDistricts[0] === null) {
       firstSelectedDistrict = districtObj;
-    } else {
+    } else if(this.state.selectedDistricts[1] === null) {
       secondSelectedDistrict = districtObj;
     }
 
@@ -56,7 +67,10 @@ class App extends Component {
         <Search
           handleSearchEvent={this.handleSearchEvent}
         />
-        <CompareDistricts selectedDistricts={this.state.selectedDistricts}/>
+        <CompareDistricts 
+          selectedDistricts={this.state.selectedDistricts}
+          handleSelect={this.handleSelect}
+        />
         {
           this.state.districts &&
           <DistrictsContainer

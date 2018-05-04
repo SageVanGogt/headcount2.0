@@ -15,7 +15,8 @@ export default class DistrictRepository {
       if (!districtAcc[dataLocation]) {
         districtAcc[dataLocation] = {
           location: dataLocation.toUpperCase(),
-          data: {}
+          data: {},
+          selected: false
         };
       }
       districtAcc[dataLocation].data = {

@@ -18,7 +18,13 @@ const DistrictCard = (props) => {
   });
 
   return (
-    <article className="district-card" onClick={() => props.handleSelect(props.districtData.location)}>
+    <article 
+      className="district-card" 
+      onClick={() => props.handleSelect(props.districtData.location)}
+      style={{
+        border: props.districtData.selected && '5px solid blue'
+      }}
+    >
       <section className="district-card-header">
         <h2 className="district-name">{props.districtData.location}</h2>
       </section>
