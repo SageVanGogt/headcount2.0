@@ -5,9 +5,9 @@ export default class DistrictRepository {
 
   organizeData (districts) {
     const districtData = districts.reduce((districtAcc, districtData) => {
-      const dataLocation = districtData.Location;
+      const dataLocation = districtData.Location.toUpperCase();
       const dataNum = (
-        isNaN(parseInt(districtData.Data)) ?
+        isNaN(parseInt(districtData.Data, 10)) ?
           0 :
           Math.round(1000 * districtData.Data) / 1000
       );
@@ -71,8 +71,8 @@ export default class DistrictRepository {
     const comparedValue = Math.round(districtName1Avg / districtName2Avg * 1000) / 1000;
     return {
       [districtName1]: districtName1Avg,
-      [districtName2]: districtName2Avg,
-      'compared': comparedValue
+      'compared': comparedValue,
+      [districtName2]: districtName2Avg
     };
   }
 }
