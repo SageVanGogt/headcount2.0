@@ -5,7 +5,7 @@ export default class DistrictRepository {
 
   organizeData (districts) {
     const districtData = districts.reduce((districtAcc, districtData) => {
-      const dataLocation = districtData.Location;
+      const dataLocation = districtData.Location.toUpperCase();
       const dataNum = (
         isNaN(parseInt(districtData.Data)) ?
           0 :

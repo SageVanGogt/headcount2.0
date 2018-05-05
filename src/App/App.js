@@ -15,8 +15,7 @@ class App extends Component {
     this.state = {
       districts: '',
       selectedDistricts: [null, null],
-      firstSelectedDistrict: null,
-      secondSelectedDistrict: null
+      comparedDistricts: {}
     };
   }
 
@@ -34,31 +33,41 @@ class App extends Component {
 
   handleSelect = (district) => {
     const districtObj = allDistricts.findByName(district);
-    districtObj.selected = !districtObj.selected;
-    let firstSelectedDistrict = this.state.firstSelectedDistrict || null;
-    let secondSelectedDistrict = this.state.secondSelectedDistrict || null;
-    
-    // if(this.state.selectedDistricts[0] && this.state.selectedDistricts[0].selected) {
-    //   firstSelectedDistrict = null;
-    // } else if(this.state.selectedDistricts[1] && this.state.selectedDistricts[0].selected) {
-    //   secondSelectedDistrict = null;
-    // }
-
-    //if card is selected, and it is already
-    //this selected array, remove that card object
-    //from the selected cardsarray
-
-    if(this.state.selectedDistricts[0] === null) {
-      firstSelectedDistrict = districtObj;
-    } else if(this.state.selectedDistricts[1] === null) {
-      secondSelectedDistrict = districtObj;
+    const firstSelectedDistrict = this.state.selectedDistricts[0] || null;
+    const secondSelectedDistrict = this.state.selectedDistricts[1] || null;
+    const selectedDistricts = [firstSelectedDistrict, secondSelectedDistrict];
+    switch (districtObj.selected) {
+      case true:
+        const selectedCardIndex = selectedDistricts.indexOf(districtObj);
+        selectedDistricts.splice(selectedCardIndex, 1, null);        
+        break;
+      case false:
+        const insertIndex = selectedDistricts.indexOf(null);
+        selectedDistricts.splice(insertIndex, 1, districtObj);
+        break;
     }
+    districtObj.selected = !districtObj.selected;
+    this.compareDistricts(selectedDistricts);
 
     this.setState({
-      selectedDistricts: [firstSelectedDistrict, secondSelectedDistrict],
-      firstSelectedDistrict,
-      secondSelectedDistrict
+      selectedDistricts
     })
+  }
+
+  compareDistricts = (districts) => {
+    if(districts[0] && districts[1]) {
+      let district1 = districts[0].location;
+      let district2 = districts[1].location;
+      const comparedDistricts = allDistricts.compareDistrictAverages(district1, district2)
+      this.setState({
+        comparedDistricts
+      })
+    } 
+    else {
+      this.setState({
+        comparedDistricts: {}
+      })
+    }
   }
 
   render () {
