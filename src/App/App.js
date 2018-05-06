@@ -41,8 +41,8 @@ class App extends Component {
       const selectedCardIndex = selectedDistricts.indexOf(districtObj);
       selectedDistricts.splice(selectedCardIndex, 1, null);
     } else {
-        const insertIndex = selectedDistricts.indexOf(null);
-        selectedDistricts.splice(insertIndex, 1, districtObj);
+      const insertIndex = selectedDistricts.indexOf(null);
+      selectedDistricts.splice(insertIndex, 1, districtObj);
     }
     districtObj.selected = !districtObj.selected;
     this.compareDistricts(selectedDistricts);
