@@ -1,41 +1,59 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './DistrictCard.css';
 
-const DistrictCard = (props) => {
-  const individualDistrict = Object.keys(props.districtData.data);
-  const districtAnnualData = individualDistrict.map((annualData, index) => {
-    const data = props.districtData.data[annualData];
-    return (
-      <li
-        style={{
-          color: data > .5 ? 'green' : '9E0C09'
-        }}
-        key={`card${index}`}
-      >
-        {annualData}: {data}
-      </li>
-    );
-  });
+class DistrictCard extends Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      selected: false
+    };
+    // this.toggleClass = this.toggleClass.bind(this);
+  }
 
-  return (
-    <article 
-      className="district-card" 
-      onClick={() => props.handleSelect(props.districtData.location)}
-      style={{
-        border: props.districtData.selected && '5px solid blue'
-      }}
-    >
-      <section className="district-card-header">
-        <h2 className="district-name">{props.districtData.location}</h2>
-      </section>
-      <section className="district-card-body">
-        <h3>Yearly Progress</h3>
-        <ul className="district-data">
-          {districtAnnualData}
-        </ul>
-      </section>
-    </article>
-  );
-};
+  toggleClass () {
+    const currentState = this.state.selected;
+    this.setState({
+      selected: !currentState
+    });
+  };
+
+  render () {
+    const individualDistrict = Object.keys(this.props.districtData.data);
+    const districtAnnualData = individualDistrict.map((annualData, index) => {
+      const data = this.props.districtData.data[annualData];
+      return (
+        <li
+          style={{
+            color: data > .5 ? '#649454' : '#9e0c09'
+          }}
+          key={`card${index}`}
+        >
+          {annualData} : {data}
+        </li>
+      );
+    });
+
+    return (
+      <article
+        // className="district-card"
+        className={this.state.selected ? 'district-card selected' : 'district-card'}
+        onClick={() => {
+          this.props.handleSelect(this.props.districtData.location);
+          this.toggleClass();
+        }}
+      >
+        <section className="district-card-header">
+          <h2 className="district-name">{this.props.districtData.location}</h2>
+        </section>
+        <section className="district-card-body">
+          <h3>Yearly Progress</h3>
+          <ul className="district-data">
+            {districtAnnualData}
+          </ul>
+        </section>
+      </article>
+    );
+  }
+}
 
 export default DistrictCard;
