@@ -4,15 +4,17 @@ import './DistrictCard.css';
 class DistrictCard extends Component {
   constructor (props) {
     super(props);
-    this.setState = {
+    this.state = {
       selected: false
     };
-    this.toggleClass = this.toggleClass.bind(this);
+    // this.toggleClass = this.toggleClass.bind(this);
   }
 
   toggleClass () {
     const currentState = this.state.selected;
-    this.setState({selected: !currentState});
+    this.setState({
+      selected: !currentState
+    });
   };
 
   render () {
@@ -22,7 +24,7 @@ class DistrictCard extends Component {
       return (
         <li
           style={{
-            color: data > .5 ? 'green' : '9e0c09'
+            color: data > .5 ? '#649454' : '#9e0c09'
           }}
           key={`card${index}`}
         >
@@ -34,10 +36,10 @@ class DistrictCard extends Component {
     return (
       <article
         // className="district-card"
-        className={this.props.selected ? 'district-card selected' : 'district-card'}
+        className={this.state.selected ? 'district-card selected' : 'district-card'}
         onClick={() => {
           this.props.handleSelect(this.props.districtData.location);
-          this.toggleClass()
+          this.toggleClass();
         }}
       >
         <section className="district-card-header">
@@ -55,39 +57,3 @@ class DistrictCard extends Component {
 }
 
 export default DistrictCard;
-
-// class DistrictCard extends Component {
-//   constructor (props) {
-//     super(props);
-//     this.state = {
-//       selected: false
-//     };
-//   }
-//
-//   toggleClass () {
-//     const currentState = this.state.selected;
-//     this.setState({selected: !currentState});
-//   };
-//
-//   render () {
-//     return (
-//       <div
-//         className={this.state.active ? 'your_className' : null}
-//         onclick={this.toggleClass}
-//       >
-//         <p>{this.props.text}</p>
-//       </div>
-//     );
-//   }
-// }
-
-// class Test extends Component {
-//   render () {
-//     return (
-//       <div>
-//         <MyComponent text={'1'} />
-//         <MyComponent text={'2'} />
-//       </div>
-//     );
-//   }
-// }
