@@ -39,7 +39,7 @@ class App extends Component {
     switch (districtObj.selected) {
       case true:
         const selectedCardIndex = selectedDistricts.indexOf(districtObj);
-        selectedDistricts.splice(selectedCardIndex, 1, null);        
+        selectedDistricts.splice(selectedCardIndex, 1, null);
         break;
       case false:
         const insertIndex = selectedDistricts.indexOf(null);
@@ -51,24 +51,24 @@ class App extends Component {
 
     this.setState({
       selectedDistricts
-    })
-  }
+    });
+  };
 
   compareDistricts = (districts) => {
-    if(districts[0] && districts[1]) {
+    if (districts[0] && districts[1]) {
       let district1 = districts[0].location;
       let district2 = districts[1].location;
-      const comparedDistricts = allDistricts.compareDistrictAverages(district1, district2)
+      const comparedDistricts = allDistricts.compareDistrictAverages(district1, district2);
       this.setState({
         comparedDistricts
-      })
-    } 
+      });
+    }
     else {
       this.setState({
         comparedDistricts: {}
-      })
+      });
     }
-  }
+  };
 
   render () {
     return (
@@ -76,9 +76,10 @@ class App extends Component {
         <Search
           handleSearchEvent={this.handleSearchEvent}
         />
-        <CompareDistricts 
+        <CompareDistricts
           selectedDistricts={this.state.selectedDistricts}
           handleSelect={this.handleSelect}
+          comparisionData={this.state.comparedDistricts}
         />
         {
           this.state.districts &&
