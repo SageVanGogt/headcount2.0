@@ -36,15 +36,13 @@ class App extends Component {
     const firstSelectedDistrict = this.state.selectedDistricts[0] || null;
     const secondSelectedDistrict = this.state.selectedDistricts[1] || null;
     const selectedDistricts = [firstSelectedDistrict, secondSelectedDistrict];
-    switch (districtObj.selected) {
-      case true:
-        const selectedCardIndex = selectedDistricts.indexOf(districtObj);
-        selectedDistricts.splice(selectedCardIndex, 1, null);
-        break;
-      case false:
+
+    if (districtObj.selected) {
+      const selectedCardIndex = selectedDistricts.indexOf(districtObj);
+      selectedDistricts.splice(selectedCardIndex, 1, null);
+    } else {
         const insertIndex = selectedDistricts.indexOf(null);
         selectedDistricts.splice(insertIndex, 1, districtObj);
-        break;
     }
     districtObj.selected = !districtObj.selected;
     this.compareDistricts(selectedDistricts);
