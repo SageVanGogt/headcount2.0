@@ -71,7 +71,7 @@ export default class DistrictRepository {
     const comparedValue = Math.round(districtName1Avg / districtName2Avg * 1000) / 1000;
     return {
       [districtName1]: districtName1Avg,
-      'compared': comparedValue,
+      'compared' : comparedValue,
       [districtName2]: districtName2Avg
     };
   }

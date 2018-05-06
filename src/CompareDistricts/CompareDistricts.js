@@ -23,6 +23,7 @@ const CompareDistricts = props => {
     <DistrictCard
       districtData={props.selectedDistricts[1]}
       handleSelect={props.handleSelect}
+      selectedClass={props.selectedClass}
     />
   );
 
