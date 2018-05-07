@@ -69,4 +69,4 @@ describe('CompareDistricts component', () => {
     expect(comparisonContainer.find('.district-card').length).toEqual(2);
   });
 
-})
+});

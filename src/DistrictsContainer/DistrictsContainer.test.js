@@ -1,6 +1,6 @@
 import React from 'react';
 import DistrictsContainer from './DistrictsContainer';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import DistrictCard from '../DistrictCard/DistrictCard';
 import renderer from 'react-test-renderer';
 import '../setupTests';
@@ -11,22 +11,22 @@ describe('<DistrictsContainer />', () => {
     const districts = {
       'COLORADO': {
         location: 'COLORADO',
-        data: {},
+        stats: {}
       }, 
       'CSPRINGS': {
         location: 'COLORADO SPRINGS',
-        data: {}
-    }}
+        stats: {}
+      }};
     const handleSelect = jest.fn();
     const handleSearchEvent = jest.fn();
     const actual = renderer
       .create(<DistrictsContainer 
-          districts={districts}
-          comparisonCard={true}
-          selectedDistricts={[{location: 'Colorado', data: {2004: 2}}]}
-          handleSelect={handleSelect}
-          handleSearchEvent={handleSearchEvent}
-          />)
+        districts={districts}
+        comparisonCard={true}
+        selectedDistricts={[{location: 'Colorado', stats: {2004: 2}}]}
+        handleSelect={handleSelect}
+        handleSearchEvent={handleSearchEvent}
+      />)
       .toJSON();
 
     expect(actual).toMatchSnapshot();
@@ -36,21 +36,21 @@ describe('<DistrictsContainer />', () => {
     const expected = {
       'COLORADO': {
         location: 'COLORADO',
-        data: {},
+        stats: {}
       }, 
       'CSPRINGS': {
         location: 'COLORADO SPRINGS',
-        data: {}
-    }}
+        stats: {}
+      }};
     const handleSelect = jest.fn();
     const handleSearchEvent = jest.fn();
     const wrapper = shallow(<DistrictsContainer 
       districts={expected}
-        comparisonCard={true}
-        selectedDistricts={[{location: 'Colorado', data: {2004: 2}}]}
-        handleSelect={handleSelect}
-        handleSearchEvent={handleSearchEvent}
-      />);
+      comparisonCard={true}
+      selectedDistricts={[{location: 'Colorado', stats: {2004: 2}}]}
+      handleSelect={handleSelect}
+      handleSearchEvent={handleSearchEvent}
+    />);
 
     expect(wrapper.find('.district-container')).toHaveLength(1);
   });
@@ -59,21 +59,21 @@ describe('<DistrictsContainer />', () => {
     const expected = {
       'COLORADO': {
         location: 'COLORADO',
-        data: {},
+        stats: {}
       }, 
       'CSPRINGS': {
         location: 'COLORADO SPRINGS',
-        data: {}
-    }}
+        stats: {}
+      }};
     const handleSelect = jest.fn();
     const handleSearchEvent = jest.fn();
     const wrapper = shallow(<DistrictsContainer 
       districts={expected}
-        comparisonCard={true}
-        selectedDistricts={[{location: 'Colorado', data: {2004: 2}}]}
-        handleSelect={handleSelect}
-        handleSearchEvent={handleSearchEvent}
-      />);
+      comparisonCard={true}
+      selectedDistricts={[{location: 'Colorado', stats: {2004: 2}}]}
+      handleSelect={handleSelect}
+      handleSearchEvent={handleSearchEvent}
+    />);
 
     expect(wrapper.find(DistrictCard)).toHaveLength(2);
   });

@@ -15,12 +15,12 @@ export default class DistrictRepository {
       if (!districtAcc[dataLocation]) {
         districtAcc[dataLocation] = {
           location: dataLocation.toUpperCase(),
-          data: {},
+          stats: {},
           selected: false
         };
       }
-      districtAcc[dataLocation].data = {
-        ...districtAcc[dataLocation].data,
+      districtAcc[dataLocation].stats = {
+        ...districtAcc[dataLocation].stats,
         [districtData.TimeFrame]: dataNum
       };
       return districtAcc;
@@ -54,9 +54,9 @@ export default class DistrictRepository {
   }
 
   findAverage (districtName) {
-    const districtKeys = Object.keys(this.stats[districtName].data);
+    const districtKeys = Object.keys(this.stats[districtName].stats);
     const districtTotal = districtKeys.reduce((total, year) => {
-      total = this.stats[districtName].data[year] + total;
+      total = this.stats[districtName].stats[year] + total;
       return total;
     }, 0);
     const districtAverage = districtTotal / districtKeys.length;
@@ -68,7 +68,8 @@ export default class DistrictRepository {
     districtName2 = districtName2.toUpperCase();
     const districtName1Avg = this.findAverage(districtName1);
     const districtName2Avg = this.findAverage(districtName2);
-    const comparedValue = Math.round(districtName1Avg / districtName2Avg * 1000) / 1000;
+    const comparedValue = Math
+      .round(districtName1Avg / districtName2Avg * 1000) / 1000;
     return {
       [districtName1]: districtName1Avg,
       'compared' : comparedValue,

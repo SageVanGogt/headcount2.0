@@ -62,8 +62,7 @@ class App extends Component {
       this.setState({
         comparisonData
       });
-    }
-    else {
+    } else {
       this.setState({
         comparisonData: {}
       });
