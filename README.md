@@ -22,11 +22,13 @@ A user is able to search for a school district and compare the values of two dis
 * [Jest](https://facebook.github.io/jest/en/) - Test Runner
 * [create-react-app](https://github.com/facebook/create-react-app) - React starter kit
 
-## *Whiteboarding* 
-
-![headcount2 0whiteboarding](https://user-images.githubusercontent.com/8752377/39725903-91b86a14-520a-11e8-8cae-b077de7bf17e.jpg)
-
 ## *Main screen*
 
 <img width="1680" alt="headcount2 0" src="https://user-images.githubusercontent.com/8752377/39725855-601924a8-520a-11e8-8513-b62890ac8ea4.png">
+
+## *Whiteboarding* 
+
+![headcount2 0whiteboarding](https://user-images.githubusercontent.com/8752377/39725419-f7b36712-5208-11e8-9884-d6695ddad1b9.jpg)
+
+
 
