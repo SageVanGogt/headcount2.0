@@ -14,7 +14,7 @@ class App extends Component {
 
     this.state = {
       districts: '',
-      selectedDistricts: [null, null],
+      selectedDistricts: [],
       comparedDistricts: {}
     };
   }
@@ -28,7 +28,12 @@ class App extends Component {
     event.preventDefault();
     const {value} = event.target;
     const districts = allDistricts.findAllMatches(value);
-    this.setState({districts});
+
+    if (value === '') {
+      this.setState({districts: allDistricts.stats});
+    } else {
+      this.setState({districts});
+    }
   };
 
   handleSelect = (district) => {
@@ -77,13 +82,16 @@ class App extends Component {
         <CompareDistricts
           selectedDistricts={this.state.selectedDistricts}
           handleSelect={this.handleSelect}
-          comparisionData={this.state.comparedDistricts}
+          comparisonData={this.state.comparedDistricts}
+          comparisonCard={true}
         />
         {
           this.state.districts &&
           <DistrictsContainer
             districts={this.state.districts}
             handleSelect={this.handleSelect}
+            selectedDistricts={this.state.selectedDistricts}
+            comparisonCard={false}
           />
         }
       </div>

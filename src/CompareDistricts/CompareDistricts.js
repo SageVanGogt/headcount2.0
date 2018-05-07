@@ -8,21 +8,22 @@ const CompareDistricts = props => {
     <DistrictCard
       districtData={props.selectedDistricts[0]}
       handleSelect={props.handleSelect}
+      comparisonCard={props.comparisonCard}
     />
   );
-
   const comparisonCard = (
-    props.selectedDistricts[0] !== null
-    && props.selectedDistricts[1] !== null
+    typeof props.selectedDistricts[0] === 'object'
+    && typeof props.selectedDistricts[1] === 'object'
     && <ComparisonCard
       selectedDistricts={props.selectedDistricts}
-      comparisionData={props.comparisionData}
+      comparisonData={props.comparisonData}
     />
   );
   const secondCard = (props.selectedDistricts[1] &&
     <DistrictCard
       districtData={props.selectedDistricts[1]}
       handleSelect={props.handleSelect}
+      comparisonCard={props.comparisonCard}
     />
   );
 
