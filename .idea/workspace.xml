@@ -4,9 +4,7 @@
     <list default="true" id="f0e1e724-34b8-48a9-84cd-f99f147e6ba0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CompareDistricts/CompareDistricts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/CompareDistricts/CompareDistricts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DistrictCard/DistrictCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/DistrictCard/DistrictCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DistrictsContainer/DistrictsContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/DistrictsContainer/DistrictsContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ComparisonCard/ComparisonCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComparisonCard/ComparisonCard.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,14 +17,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4845148">
+    <splitter split-orientation="horizontal" split-proportion="0.5877495">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/App/App.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="111">
-                  <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+                <state relative-caret-position="238">
+                  <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -37,11 +35,8 @@
           <file leaf-file-name="DistrictsContainer.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/DistrictsContainer/DistrictsContainer.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="525">
-                  <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="51">
+                  <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
                 </state>
               </provider>
             </entry>
@@ -49,8 +44,8 @@
           <file leaf-file-name="DistrictCard.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/DistrictCard/DistrictCard.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+                <state relative-caret-position="289">
+                  <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -65,8 +60,8 @@
           <file leaf-file-name="CompareDistricts.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/CompareDistricts/CompareDistricts.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="342">
-                  <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+                <state relative-caret-position="171">
+                  <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -74,11 +69,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ComparisonCard.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="ComparisonCard.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/ComparisonCard/ComparisonCard.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="15" selection-start-line="15" selection-end-line="15" />
+                <state relative-caret-position="102">
+                  <caret line="6" column="63" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="63" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -86,11 +81,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="helper.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="helper.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/helper.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="18" column="17" selection-start-line="18" selection-end-line="19" />
+                <state relative-caret-position="374">
+                  <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
                 </state>
               </provider>
             </entry>
@@ -165,14 +160,14 @@
         <option value="$PROJECT_DIR$/src/DistrictsContainer/DistrictsContainer.css" />
         <option value="$PROJECT_DIR$/src/ComparisonCard/ComparisonCard.test.js" />
         <option value="$PROJECT_DIR$/src/ComparisonCard/ComparisonCard.css" />
-        <option value="$PROJECT_DIR$/src/ComparisonCard/ComparisonCard.js" />
         <option value="$PROJECT_DIR$/src/CompareDistricts/CompareDistricts.css" />
         <option value="$PROJECT_DIR$/src/DistrictCard/DistrictCard.css" />
         <option value="$PROJECT_DIR$/src/DistrictCard/DistrictCard.js" />
         <option value="$PROJECT_DIR$/src/DistrictsContainer/DistrictsContainer.js" />
         <option value="$PROJECT_DIR$/src/CompareDistricts/CompareDistricts.js" />
-        <option value="$PROJECT_DIR$/src/App/App.js" />
         <option value="$PROJECT_DIR$/src/helper.js" />
+        <option value="$PROJECT_DIR$/src/ComparisonCard/ComparisonCard.js" />
+        <option value="$PROJECT_DIR$/src/App/App.js" />
       </list>
     </option>
   </component>
@@ -326,7 +321,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68957000" />
+    <option name="totallyTimeSpent" value="69835000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -684,50 +679,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ComparisonCard/ComparisonCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DistrictCard/DistrictCard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CompareDistricts/CompareDistricts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DistrictsContainer/DistrictsContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        <state relative-caret-position="289">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -736,8 +691,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/helper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="17" selection-start-line="18" selection-end-line="19" />
+        <state relative-caret-position="374">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CompareDistricts/CompareDistricts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DistrictsContainer/DistrictsContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ComparisonCard/ComparisonCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="63" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -15,7 +15,7 @@ class App extends Component {
     this.state = {
       districts: '',
       selectedDistricts: [],
-      comparedDistricts: {}
+      comparisonData: {}
     };
   }
 
@@ -61,14 +61,14 @@ class App extends Component {
     if (districts[0] && districts[1]) {
       let district1 = districts[0].location;
       let district2 = districts[1].location;
-      const comparedDistricts = allDistricts.compareDistrictAverages(district1, district2);
+      const comparisonData = allDistricts.compareDistrictAverages(district1, district2);
       this.setState({
-        comparedDistricts
+        comparisonData
       });
     }
     else {
       this.setState({
-        comparedDistricts: {}
+        comparisonData: {}
       });
     }
   };
@@ -82,7 +82,7 @@ class App extends Component {
         <CompareDistricts
           selectedDistricts={this.state.selectedDistricts}
           handleSelect={this.handleSelect}
-          comparisonData={this.state.comparedDistricts}
+          comparisonData={this.state.comparisonData}
           comparisonCard={true}
         />
         {
