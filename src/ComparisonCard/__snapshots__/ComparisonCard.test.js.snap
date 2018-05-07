@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comparison Card Test Should match the comparison card snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ComparisonCard
+    comparisonData={
+        Object {
+            "ADAMS COUNTY 14": 0.709,
+            "COLORADO": 0.53,
+            "compared": 0.748,
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2>
+          ADAMS COUNTY 14
+           : 
+          0.709
+</h2>,
+        <h2>
+          COLORADO
+           : 
+          0.53
+</h2>,
+        <h2>
+          compared
+           : 
+          0.748
+</h2>,
+      ],
+      "className": "comparison-card",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "compare-card0",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "ADAMS COUNTY 14",
+            " : ",
+            0.709,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "ADAMS COUNTY 14",
+          " : ",
+          0.709,
+        ],
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": "compare-card1",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "COLORADO",
+            " : ",
+            0.53,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "COLORADO",
+          " : ",
+          0.53,
+        ],
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": "compare-card2",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "compared",
+            " : ",
+            0.748,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "compared",
+          " : ",
+          0.748,
+        ],
+        "type": "h2",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2>
+            ADAMS COUNTY 14
+             : 
+            0.709
+</h2>,
+          <h2>
+            COLORADO
+             : 
+            0.53
+</h2>,
+          <h2>
+            compared
+             : 
+            0.748
+</h2>,
+        ],
+        "className": "comparison-card",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "compare-card0",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "ADAMS COUNTY 14",
+              " : ",
+              0.709,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "ADAMS COUNTY 14",
+            " : ",
+            0.709,
+          ],
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": "compare-card1",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "COLORADO",
+              " : ",
+              0.53,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "COLORADO",
+            " : ",
+            0.53,
+          ],
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": "compare-card2",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "compared",
+              " : ",
+              0.748,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "compared",
+            " : ",
+            0.748,
+          ],
+          "type": "h2",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
