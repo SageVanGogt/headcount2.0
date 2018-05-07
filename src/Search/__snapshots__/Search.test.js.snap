@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Tests matches the snapshot 1`] = `
+<div
+  className="card-container"
+>
+  <form
+    action=""
+    className="district-form"
+  >
+    <h1>
+      Welcome to HeadCount 2.0
+    </h1>
+    <input
+      className="district-input"
+      onChange={[Function]}
+      placeholder="Search Districts"
+      type="text"
+    />
+  </form>
+  <hr />
+</div>
+`;
