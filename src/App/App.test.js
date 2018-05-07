@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { shallow, mount } from 'enzyme';
-// import '../setupTests';
+import '../setupTests';
 
 describe('App test', () => {
   it('Should render all the components', () => {

@@ -13,8 +13,8 @@ describe('Comparison Card Test', () => {
         'ADAMS COUNTY 14': 0.709,
         'COLORADO': 0.53,
         'compared': 0.748
-      } 
-    }
+        } 
+      }
       />)
 
     expect(comparisonCard).toMatchSnapshot()
