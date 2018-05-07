@@ -2,6 +2,7 @@ import React from 'react';
 import DistrictCard from './../DistrictCard/DistrictCard';
 import ComparisonCard from './../ComparisonCard/ComparisonCard';
 import './CompareDistricts.css';
+import PropTypes from 'prop-types'
 
 const CompareDistricts = props => {
   const firstCard = (props.selectedDistricts[0] &&
@@ -35,6 +36,14 @@ const CompareDistricts = props => {
     </div>
   );
 };
+
+CompareDistricts.propTypes = {
+  comparisonCard: PropTypes.bool.isRequired,
+  comparisonData: PropTypes.object.isRequired,
+  selectedDistricts: PropTypes.array.isRequired,
+  handleSelect: PropTypes.func.isRequired
+};
+
 
 export default CompareDistricts;
 

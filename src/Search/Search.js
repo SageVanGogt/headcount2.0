@@ -20,9 +20,10 @@ const Search = (props) => {
   );
 };
 
-DistrictsContainer.propTypes = {
+Search.propTypes = {
   handleSearchEvent: PropTypes.func.isRequired
 };
+
 
 
 export default Search;
