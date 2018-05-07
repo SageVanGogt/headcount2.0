@@ -39,16 +39,9 @@ const DistrictCard = props => {
 };
 
 DistrictCard.propTypes = {
-<<<<<<< HEAD
-  districtData: PropTypes.objectOf(PropTypes.object.isRequired),
-  selectedClass: PropTypes.string.isRequired,
-  handleSelect: PropTypes.func.isRequired
-};
-=======
   districtData: PropTypes.object.isRequired,
   handleSelect: PropTypes.func.isRequired,
   selectedClass: PropTypes.string.isRequired
-}
->>>>>>> 044dce2627a31d183ca6fa920e62ef90d1e0caef
+};
 
 export default DistrictCard;

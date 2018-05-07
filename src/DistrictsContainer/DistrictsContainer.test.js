@@ -16,7 +16,7 @@ describe('<DistrictsContainer />', () => {
       'CSPRINGS': {
         location: 'COLORADO SPRINGS',
         data: {}
-    }}
+    }};
     const handleSelect = jest.fn();
     const handleSearchEvent = jest.fn();
     const actual = renderer
@@ -41,7 +41,7 @@ describe('<DistrictsContainer />', () => {
       'CSPRINGS': {
         location: 'COLORADO SPRINGS',
         data: {}
-    }}
+    }};
     const handleSelect = jest.fn();
     const handleSearchEvent = jest.fn();
     const wrapper = shallow(<DistrictsContainer 
@@ -64,7 +64,7 @@ describe('<DistrictsContainer />', () => {
       'CSPRINGS': {
         location: 'COLORADO SPRINGS',
         data: {}
-    }}
+    }};
     const handleSelect = jest.fn();
     const handleSearchEvent = jest.fn();
     const wrapper = shallow(<DistrictsContainer 

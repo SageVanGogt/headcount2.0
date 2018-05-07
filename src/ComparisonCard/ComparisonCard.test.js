@@ -6,7 +6,6 @@ import '../setupTests';
 
 describe('Comparison Card Test', () => {
   it('Should match the comparison card snapshot', () => {
-    // const data = 
     const comparisonCard = shallow(<ComparisonCard 
       comparisonData={
         {
@@ -15,8 +14,8 @@ describe('Comparison Card Test', () => {
         'compared': 0.748
         } 
       }
-      />)
+      />);
 
-    expect(comparisonCard).toMatchSnapshot()
-  })
-})
+    expect(comparisonCard).toMatchSnapshot();
+  });
+});

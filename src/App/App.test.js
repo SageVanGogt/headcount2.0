@@ -14,21 +14,21 @@ describe('App test', () => {
   });
 
   it('Should match the snapshot', () => {
-    const appComponent = shallow(<App />)
+    const appComponent = shallow(<App />);
 
-    expect(appComponent).toMatchSnapshot()
+    expect(appComponent).toMatchSnapshot();
   })
 
   it('Should render with the correct default state', () => {
-    const appComponent = shallow(<App />)
+    const appComponent = shallow(<App />);
 
     expect(Object.keys(appComponent.state('districts')).length).toEqual(181);
     expect(appComponent.state('selectedDistricts')).toEqual([]);
-    expect(appComponent.state('comparisonData')).toEqual({})
+    expect(appComponent.state('comparisonData')).toEqual({});
   })
 
   it('Should set the state of selectedDistricts to the data of the first district passed in', () => {
-    const appComponent = shallow(<App />)
+    const appComponent = shallow(<App />);
     appComponent.instance().handleSelect('COLORADO');
     const expectedDistrict = { 
       location: 'COLORADO',
@@ -46,10 +46,10 @@ describe('App test', () => {
           '2014': 0.741 
         },
       selected: true
-   }
+   };
 
-    expect(appComponent.state('selectedDistricts')[0]).toEqual(expectedDistrict)
-  })
+    expect(appComponent.state('selectedDistricts')[0]).toEqual(expectedDistrict);
+  });
 
   it('Should set the state of selectedDistricts to the data of the second district passed in', () => {
     const appComponent = shallow(<App />)
@@ -71,14 +71,14 @@ describe('App test', () => {
         "2014": 0.995
       },
       "selected": true
-    }
-   appComponent.update()
+    };
+   appComponent.update();
     
     expect(appComponent.state('selectedDistricts')[1]).toEqual(expectedDistrict)
-  })
+  });
 
   it('Should set the state of selectedDistricts at index 1 to the data of the latest district passed in', () => {
-    const appComponent = shallow(<App />)
+    const appComponent = shallow(<App />);
     appComponent.instance().handleSelect('EDISON 54 JT');
     appComponent.instance().handleSelect('ELBERT 200');
     appComponent.instance().handleSelect('DEL NORTE C-7');
@@ -100,13 +100,13 @@ describe('App test', () => {
       },
       "selected": true
     }
-   appComponent.update()
+   appComponent.update();
     
-    expect(appComponent.state('selectedDistricts')[1]).toEqual(expectedDistrict)
+    expect(appComponent.state('selectedDistricts')[1]).toEqual(expectedDistrict);
   })
 
   it('Should update the state of comparisonData when districts are passed in', () => {
-    const appComponent = shallow(<App />)
+    const appComponent = shallow(<App />);
     appComponent.instance().compareDistricts([
       {
         "location": "DEL NORTE C-7",
@@ -140,7 +140,7 @@ describe('App test', () => {
           "2014": 0.995
         }
       }
-    ])
+    ]);
     
     const expectedComparison = { 
       'DEL NORTE C-7': 0.455,
@@ -149,34 +149,34 @@ describe('App test', () => {
   }
 
   expect(appComponent.state('comparisonData')).toEqual(expectedComparison)
-  })
+  });
 
   it('Should filter the districts with the event value', () => {
-    const appComponent = shallow(<App />)
+    const appComponent = shallow(<App />);
     const e = {
       target: {
         value: 'Colo'
-    }}
+    }};
 
-    appComponent.instance().handleSearchEvent(e)
+    appComponent.instance().handleSearchEvent(e);
     
-    expect(appComponent.state('districts').length).toEqual(2)
+    expect(appComponent.state('districts').length).toEqual(2);
   })
 
   it('Should update state with all districts if the value is an empty string', () => {
-    const appComponent = shallow(<App />)
+    const appComponent = shallow(<App />);
 
     const e = {
       target: {
         value: ''
       }
-    }
+    };
 
-    appComponent.instance().handleSearchEvent(e)
-    appComponent.update()
+    appComponent.instance().handleSearchEvent(e);
+    appComponent.update();
 
-    expect(Object.keys(appComponent.state('districts')).length).toEqual(181)
-  })
+    expect(Object.keys(appComponent.state('districts')).length).toEqual(181);
+  });
 
   it('Should update dsitricts state to be empty if the value doesn\'t match any cards', () => {
     const appComponent = shallow(<App />);
@@ -185,10 +185,10 @@ describe('App test', () => {
       target: {
         value: 'jaskd'
       }
-    }
+    };
 
-    appComponent.instance().handleSearchEvent(e)
+    appComponent.instance().handleSearchEvent(e);
 
-    expect(appComponent.state('districts').length).toEqual(0)
-  })
-})
+    expect(appComponent.state('districts').length).toEqual(0);
+  });
+});

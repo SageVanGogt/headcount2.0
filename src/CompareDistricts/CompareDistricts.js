@@ -2,7 +2,7 @@ import React from 'react';
 import DistrictCard from './../DistrictCard/DistrictCard';
 import ComparisonCard from './../ComparisonCard/ComparisonCard';
 import './CompareDistricts.css';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const CompareDistricts = props => {
   const firstCard = (props.selectedDistricts[0] &&
