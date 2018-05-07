@@ -19,9 +19,7 @@ const DistrictCard = props => {
 
   return (
     <article
-      // className={this.state.selected ? 'district-card selected' : 'district-card'}
-      className={props.selectedClass}
-      // className={props.comparisionCard ? 'district-card' : ''}
+      className={props.comparisonCard ? 'district-card selected' : props.selectedClass}
       onClick={() => {
         props.handleSelect(props.districtData.location);
       }}

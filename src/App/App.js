@@ -28,7 +28,12 @@ class App extends Component {
     event.preventDefault();
     const {value} = event.target;
     const districts = allDistricts.findAllMatches(value);
-    this.setState({districts});
+
+    if (value === '') {
+      this.setState({districts: allDistricts.stats});
+    } else {
+      this.setState({districts});
+    }
   };
 
   handleSelect = (district) => {
@@ -50,35 +55,7 @@ class App extends Component {
     this.setState({
       selectedDistricts
     });
-    // }, this.removeSelected(selectedDistricts));
-
-    // this.removeSelected();
   };
-
-  // removeSelected = (selectedDistricts) => {
-  //   const districtKeys = Object.keys(this.state.districts);
-  //   const currSelectedDistricts = districtKeys.reduce((foundDistricts, district) => {
-  //     if (this.state.districts[district].selected) {
-  //       foundDistricts.push(this.state.districts[district]);
-  //     }
-  //     return foundDistricts;
-  //   }, []);
-  //   // if currSelectedDistricts not found in selectedDistricts
-  //     // remove state.selected
-  //   const notSelectedDistricts = currSelectedDistricts.filter(currDistrict => {
-  //     return !this.state.selectedDistricts.includes(currDistrict);
-  //   });
-  //   if (notSelectedDistricts.length >= 1 &&
-  //       this.state.selectedDistricts[0] !== null &&
-  //       this.state.selectedDistricts[1] !== null
-  //     ) {
-  //       console.log(notSelectedDistricts)
-  //
-  //     // this.setState({selectedDistricts}, function () {
-  //     // notSelectedDistricts.selected = !notSelectedDistricts.selected;
-  //     // })
-  //   }
-  // };
 
   compareDistricts = (districts) => {
     if (districts[0] && districts[1]) {
@@ -105,9 +82,8 @@ class App extends Component {
         <CompareDistricts
           selectedDistricts={this.state.selectedDistricts}
           handleSelect={this.handleSelect}
-          comparisionData={this.state.comparedDistricts}
-          // selectedClass='district-card'
-          comparisionCard={true}
+          comparisonData={this.state.comparedDistricts}
+          comparisonCard={true}
         />
         {
           this.state.districts &&
@@ -115,6 +91,7 @@ class App extends Component {
             districts={this.state.districts}
             handleSelect={this.handleSelect}
             selectedDistricts={this.state.selectedDistricts}
+            comparisonCard={false}
           />
         }
       </div>
