@@ -153,12 +153,12 @@ describe('App test', () => {
 
   it('Should filter the districts with the event value', () => {
     const appComponent = shallow(<App />);
-    const e = {
+    const event = {
       target: {
         value: 'Colo'
       }};
 
-    appComponent.instance().handleSearchEvent(e);
+    appComponent.instance().handleSearchEvent(event);
     
     expect(appComponent.state('districts').length).toEqual(2);
   });
@@ -166,13 +166,13 @@ describe('App test', () => {
   it('Should update state with all districts if the value is an empty string', () => {
     const appComponent = shallow(<App />);
 
-    const e = {
+    const event = {
       target: {
         value: ''
       }
     };
 
-    appComponent.instance().handleSearchEvent(e);
+    appComponent.instance().handleSearchEvent(event);
     appComponent.update();
 
     expect(Object.keys(appComponent.state('districts')).length).toEqual(181);
@@ -181,13 +181,13 @@ describe('App test', () => {
   it('Should update dsitricts state to be empty if the value doesn\'t match any cards', () => {
     const appComponent = shallow(<App />);
 
-    const e = {
+    const event = {
       target: {
         value: 'jaskd'
       }
     };
 
-    appComponent.instance().handleSearchEvent(e);
+    appComponent.instance().handleSearchEvent(event);
 
     expect(appComponent.state('districts').length).toEqual(0);
   });
