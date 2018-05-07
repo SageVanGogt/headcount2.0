@@ -1,19 +1,19 @@
 import React from 'react';
 import './DistrictCard.css';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 const DistrictCard = props => {
-  const individualDistrict = Object.keys(props.districtData.data);
+  const individualDistrict = Object.keys(props.districtData.stats);
   const districtAnnualData = individualDistrict.map((annualData, index) => {
-    const data = props.districtData.data[annualData];
+    const stats = props.districtData.stats[annualData];
     return (
       <li
         style={{
-          color: data > .5 ? '#649454' : '#9e0c09'
+          color: stats > .5 ? '#649454' : '#9e0c09'
         }}
         key={`card${index}`}
       >
-        {annualData} : {data}
+        {annualData} : {stats}
       </li>
     );
   });

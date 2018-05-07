@@ -62,8 +62,7 @@ class App extends Component {
       this.setState({
         comparisonData
       });
-    }
-    else {
+    } else {
       this.setState({
         comparisonData: {}
       });
@@ -93,7 +92,7 @@ class App extends Component {
         }
       </div>
     );
-  };
+  }
 }
 
 export default App;

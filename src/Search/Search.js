@@ -1,7 +1,6 @@
 import React from 'react';
 import './Search.css';
 import PropTypes from 'prop-types';
-import DistrictsContainer from '../DistrictsContainer/DistrictsContainer';
 
 const Search = (props) => {
   return (

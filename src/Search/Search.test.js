@@ -1,7 +1,7 @@
 import './Search.css';
 import React from 'react';
 import Search from './Search';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 
 describe('Search Tests', () => {
