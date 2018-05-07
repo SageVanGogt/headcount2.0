@@ -1,10 +1,10 @@
 import React from 'react';
 import './ComparisonCard.css';
 
-const ComparisonCard = ({comparisionData}) => {
-  let data = Object.keys(comparisionData).map((item, index) => {
+const ComparisonCard = ({comparisonData}) => {
+  let data = Object.keys(comparisonData).map((item, index) => {
     return (
-      <h2 key={`compare-card${index}`}>{item} : {comparisionData[item]}</h2>
+      <h2 key={`compare-card${index}`}>{item} : {comparisonData[item]}</h2>
     );
   });
   return (
