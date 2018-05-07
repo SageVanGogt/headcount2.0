@@ -28,7 +28,6 @@ class App extends Component {
     event.preventDefault();
     const {value} = event.target;
     const districts = allDistricts.findAllMatches(value);
-
     if (value === '') {
       this.setState({districts: allDistricts.stats});
     } else {
