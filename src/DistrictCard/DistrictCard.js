@@ -1,5 +1,6 @@
 import React from 'react';
 import './DistrictCard.css';
+import PropTypes from 'prop-types'
 
 const DistrictCard = props => {
   const individualDistrict = Object.keys(props.districtData.data);
@@ -36,5 +37,11 @@ const DistrictCard = props => {
     </article>
   );
 };
+
+DistrictCard.propTypes = {
+  districtData: PropTypes.object.isRequired,
+  handleSelect: PropTypes.func.isRequired,
+  selectedClass: PropTypes.string.isRequired
+}
 
 export default DistrictCard;
