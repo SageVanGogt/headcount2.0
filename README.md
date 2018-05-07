@@ -31,4 +31,6 @@ A user is able to search for a school district and compare the values of two dis
 ![headcount2 0whiteboarding](https://user-images.githubusercontent.com/8752377/39725419-f7b36712-5208-11e8-9884-d6695ddad1b9.jpg)
 
 
+## *Mobile*
 
+---
