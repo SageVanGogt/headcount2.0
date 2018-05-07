@@ -7,7 +7,7 @@ A user is able to search for a school district and compare the values of two dis
 
 ## Contributors
 
-[Camilo Snapp](https://github.com/CamArturo),[Sage Vogt](https://github.com/SageVanGogt)(https://github.com/SageVanGogt),[Jack Laird](https://github.com/JackLaird0)
+[Camilo Snapp](https://github.com/CamArturo), [Sage Vogt](https://github.com/SageVanGogt), [Jack Laird](https://github.com/JackLaird0)
 
 ## *Project Goals*
 * Test Driven Development (TDD)
