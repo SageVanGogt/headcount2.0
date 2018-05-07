@@ -32,7 +32,6 @@ class App extends Component {
     } else {
       this.setState({districts});
     }
-    console.log(this.state.districts.length)
   };
 
   handleSelect = (district) => {
