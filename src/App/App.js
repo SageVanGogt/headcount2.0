@@ -25,7 +25,6 @@ class App extends Component {
   }
 
   handleSearchEvent = (event) => {
-    event.preventDefault();
     const {value} = event.target;
     const districts = allDistricts.findAllMatches(value);
     if (value === '') {
@@ -40,7 +39,7 @@ class App extends Component {
     const firstSelectedDistrict = this.state.selectedDistricts[0] || null;
     const secondSelectedDistrict = this.state.selectedDistricts[1] || null;
     const selectedDistricts = [firstSelectedDistrict, secondSelectedDistrict];
-
+   
     if (districtObj.selected) {
       const selectedCardIndex = selectedDistricts.indexOf(districtObj);
       selectedDistricts.splice(selectedCardIndex, 1, null);
@@ -50,7 +49,6 @@ class App extends Component {
     }
     districtObj.selected = !districtObj.selected;
     this.compareDistricts(selectedDistricts);
-
     this.setState({
       selectedDistricts
     });
