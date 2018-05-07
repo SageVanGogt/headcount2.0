@@ -1,5 +1,7 @@
 import React from 'react';
 import './Search.css';
+import PropTypes from 'prop-types';
+import DistrictsContainer from '../DistrictsContainer/DistrictsContainer';
 
 const Search = (props) => {
   return (
@@ -17,5 +19,10 @@ const Search = (props) => {
     </div>
   );
 };
+
+DistrictsContainer.propTypes = {
+  handleSearchEvent: PropTypes.func.isRequired
+};
+
 
 export default Search;
